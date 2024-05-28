@@ -1,0 +1,35 @@
+<h2 class="text-uppercase">{{ title }}</h2>
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+  <div class="cl1">
+    <label class="form-label" for="title">Замітка</label>
+    <input
+      class="form-control"
+      placeholder="Введіть заголовок"
+      type="text"
+      id="title"
+      [ngModel]="myText.title"
+      name="title"
+      required
+    />
+  </div>
+  <div class="cl2">
+    <label class="form-label" for="content">Зміст</label>
+    <textarea
+      class="form-control"
+      id="content"
+      placeholder="Введіть текст"
+      [ngModel]="myText.content"
+      name="content"
+      required
+    ></textarea>
+  </div>
+
+  <div class="cl3">
+    <div class="btn-group">
+      <button type="submit" class="btn ">Зберегти</button>
+      <button type="button" class="btn " (click)="onCancel()">
+        Відмінити
+      </button>
+    </div>
+  </div>
+</form>

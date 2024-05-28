@@ -1,0 +1,28 @@
+<div class="modal" tabindex="-1" role="dialog" style="display: block">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Підтвердити видалення</h5>
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          (click)="confirm(false)"
+        >
+          <!-- <span aria-hidden="true">&times;</span> -->
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Ви хочете видалити запис?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" (click)="confirm(true)">
+          Знищити
+        </button>
+        <button type="button" class="btn" (click)="confirm(false)">
+          Відмінити
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
